@@ -16,16 +16,16 @@ public class EmployeeService {
         return repository.save(employee);
     }
 
-    public Employee read(Long id) {
-        return repository.findOne(id);
+    public Employee read(Long employeeId) {
+        return repository.findOne(employeeId);
     }
 
     public Iterable<Employee> index() {
         return repository.findAll();
     }
 
-    public Employee update(Long id, Employee newEmployeeData) {
-        Employee originalEmployee = repository.findOne(id);
+    public Employee update(Long employeeId, Employee newEmployeeData) {
+        Employee originalEmployee = repository.findOne(employeeId);
         originalEmployee.setFirstName(newEmployeeData.getFirstName());
         originalEmployee.setLastName(newEmployeeData.getLastName());
         originalEmployee.setPhoneNumber(newEmployeeData.getPhoneNumber());
