@@ -3,8 +3,6 @@ package io.zipcoder.persistenceapp.controllers;
 import io.zipcoder.persistenceapp.models.Employee;
 import io.zipcoder.persistenceapp.service.EmployeeService;
 
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +29,7 @@ public class EmployeeController {
         return new ResponseEntity<>(service.update(employeeId, newEmployeeData), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/delete")
     public ResponseEntity<Employee> delete(@RequestBody Employee employee) {
         return new ResponseEntity<>(service.delete(employee), HttpStatus.OK);
     }
