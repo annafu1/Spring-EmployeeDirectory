@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "employee-controller")
+@RequestMapping(value = "/API/employee-controller")
 public class EmployeeController {
     @Autowired
     private EmployeeService service;
