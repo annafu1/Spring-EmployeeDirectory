@@ -1,4 +1,4 @@
-package io.zipcoder.persistenceapp;
+package io.zipcoder.persistenceapp.models;
 
 import javax.persistence.*;
 
